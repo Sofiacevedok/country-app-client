@@ -1,0 +1,72 @@
+.card {
+  background-color: rgba(255, 255, 255, 0.434);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 440px;
+  height: 500px;
+  justify-self: center;
+  align-self: center;
+  margin: 0%;
+  box-shadow: 4px 4px 7px 4px rgba(42, 42, 42, 0.76);
+  -webkit-box-shadow: 4px 4px 7px 4px rgba(42, 42, 42, 0.76);
+  -moz-box-shadow: 4px 4px 7px 4px rgba(42, 42, 42, 0.76);
+}
+
+.div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.divButton {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  padding-top: 50px;
+}
+
+.select {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.button {
+  justify-content: center;
+  margin: 0%;
+  height: 30px;
+  padding: 0px 16px 0px 16px;
+  min-width: 100px;
+}
+
+@media screen and (max-device-width: 414px) {
+  .card {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .button {
+    padding: 16px 40px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .input {
+    margin-left: 10px;
+    height: 23px;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .label {
+    margin: 10px;
+  }
+}

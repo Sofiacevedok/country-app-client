@@ -1,0 +1,151 @@
+.countries {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+  padding: 40px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.434);
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  justify-self: center;
+  align-self: center;
+  box-shadow: 4px 4px 7px 4px rgba(42, 42, 42, 0.76);
+  -webkit-box-shadow: 4px 4px 7px 4px rgba(42, 42, 42, 0.76);
+  -moz-box-shadow: 4px 4px 7px 4px rgba(42, 42, 42, 0.76);
+}
+
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.311);
+  box-shadow: 4px 4px 7px 4px rgba(24, 24, 24, 0.76);
+  -webkit-box-shadow: 4px 4px 7px 4px rgba(24, 24, 24, 0.76);
+  -moz-box-shadow: 4px 4px 7px 4px rgba(24, 24, 24, 0.76);
+}
+.p {
+  padding: 6%;
+  color: rgb(46, 46, 46);
+}
+
+.buttonPag {
+  display: flex;
+  justify-content: center;
+  margin: 0%;
+  height: 30px;
+  padding: 0px 16px 0px 16px;
+  min-width: 100px;
+}
+
+.img {
+  width: 60%;
+}
+
+.divButton {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media screen and (max-width: 820px) {
+  .countries {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .card {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .divButton {
+    padding: 30px 0px 0px 3%;
+  }
+}
+
+@media screen and (max-device-width: 420px) {
+  .countries {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    padding: 5px 13px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .card {
+    width: 120px;
+    height: 120px;
+    border-radius: 6%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .divButton {
+    padding: 20px 0px 10px 2%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .p {
+    padding: 4px;
+    font-size: x-small;
+  }
+}
+
+@media screen and (max-width: 393px) {
+  .card {
+    width: 100px;
+    height: 100px;
+    border-radius: 6%;
+  }
+}
+@media screen and (max-device-width: 394px) {
+  .countries {
+    width: auto;
+    grid-gap: 8px;
+    gap: 5px;
+    row-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 361px) {
+  .buttonPag {
+    padding: 0px 10px 0px 10px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .card {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-device-width: 280px) {
+  .countries {
+    gap: 8px;
+    row-gap: 8px;
+  }
+}
+
+.buttonPag {
+  display: flex;
+  justify-content: center;
+  margin: 0%;
+  height: 30px;
+  padding: 0px 16px 0px 16px;
+  min-width: 100px;
+}

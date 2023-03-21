@@ -1,0 +1,14 @@
+.display {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+@media screen and (max-device-width: 420px) {
+  .display {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 40px;
+    justify-content: space-between;
+  }
+}

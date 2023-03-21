@@ -1,0 +1,73 @@
+.card {
+  background-color: rgba(255, 255, 255, 0.434);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 440px;
+  height: 500px;
+  justify-self: center;
+  align-self: center;
+  box-shadow: 4px 4px 7px 4px rgba(42, 42, 42, 0.76);
+  -webkit-box-shadow: 4px 4px 7px 4px rgba(42, 42, 42, 0.76);
+  -moz-box-shadow: 4px 4px 7px 4px rgba(42, 42, 42, 0.76);
+}
+
+.img {
+  padding-bottom: 4%;
+}
+
+.display {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.p {
+  color: aliceblue;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5%;
+  padding-block: 0.5%;
+  width: 6%;
+  height: 5%;
+}
+
+@media screen and (max-device-width: 820px) {
+  .display {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-device-width: 820px) {
+  .card {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-device-width: 820px) {
+  .button {
+    width: max-content;
+    margin-top: 20px;
+    padding: 0px 40px;
+  }
+}
+
+@media screen and (max-device-width: 420px) {
+  .card {
+    width: 80%;
+  }
+}
+
+@media screen and (max-device-width: 420px) {
+  .button {
+    padding: 0px 40px;
+    width: max-content;
+  }
+}

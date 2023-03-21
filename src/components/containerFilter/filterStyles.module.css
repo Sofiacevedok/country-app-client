@@ -1,0 +1,14 @@
+.displayFilter {
+  display: flex;
+  flex-direction: column;
+}
+
+.select {
+  color: rgb(124, 124, 124);
+}
+
+@media screen and (max-device-width: 420px) {
+  .label {
+    font-size: x-small;
+  }
+}

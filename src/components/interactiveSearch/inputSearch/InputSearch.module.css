@@ -1,0 +1,46 @@
+.searchIcon {
+  background-color: white;
+  height: 27px;
+  width: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.input {
+  padding: 0px 30px 2px 8px;
+  border-width: 0px;
+  border-style: inset;
+  border-radius: 0px;
+}
+
+.asd {
+  display: flex;
+  border: 2px solid rgb(118, 118, 118);
+  overflow: hidden;
+  border-radius: 10px;
+  width: min-content;
+}
+
+.asd:focus-within {
+  border: 2px solid rgb(0, 0, 0);
+}
+
+@media screen and (max-device-width: 420px) {
+  .asd {
+    width: 40%;
+  }
+}
+
+@media screen and (max-device-width: 420px) {
+  .input {
+    width: 69%;
+  }
+}
+
+@media screen and (max-device-width: 393px) {
+  .asd {
+    width: 35%;
+  }
+}
