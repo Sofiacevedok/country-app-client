@@ -97,7 +97,7 @@ function Countries({ countries, getCountries }) {
       <div className={styles.countries}>
         {countries &&
           countries.length &&
-          listaPaises.map((country) => (
+          listaPaises?.map((country) => (
             <Link
               className={styles.card}
               to={`/countries/${country.id}`}
