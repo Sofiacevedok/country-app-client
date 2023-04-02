@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import store from './store/index';
 import { Provider } from 'react-redux';
+export const apiUrl = process.env.REACT_APP_API_URL;
 
 ReactDOM.render(
   <Provider store={store}>

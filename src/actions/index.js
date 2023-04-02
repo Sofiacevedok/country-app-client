@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { apiUrl } from '../index';
 
 export const GET_COUNTRIES = 'GET_COUNTRIES';
 export const GET_ACTIVITY = 'GET_ACTIVITY';
@@ -8,7 +9,7 @@ export const GET_COUNTRY = 'GET_COUNTRY';
 export function getCountries(filters) {
   const { continent, activity, population, alphabetically, paises, name } =
     filters;
-  const url = `http://localhost:3001/countries?continente=${
+  const url = `${apiUrl}/countries?continente=${
     continent ? continent : ''
   }&actividad=${activity ? activity : ''}&poblacion=${
     population ? population : ''
@@ -32,7 +33,7 @@ export function getCountries(filters) {
 }
 
 export function getActivities() {
-  const url = `http://localhost:3001/activity`;
+  const url = `${apiUrl}/activity`;
 
   return function (dispatch) {
     return axios
@@ -51,7 +52,7 @@ export function getActivities() {
 }
 
 export function createActivity(obj) {
-  const url = 'http://localhost:3001/activity';
+  const url = `${apiUrl}/activity`;
   return function (dispatch) {
     return axios
       .post(url, obj) //axios. post
@@ -68,7 +69,7 @@ export function createActivity(obj) {
   };
 }
 export function getCountry(id) {
-  const url = `http://localhost:3001/countries/${id}`;
+  const url = `${apiUrl}/countries/${id}`;
 
   return function (dispatch) {
     return axios
