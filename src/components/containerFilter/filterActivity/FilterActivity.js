@@ -5,15 +5,11 @@ import styles from '../filterStyles.module.css';
 
 export default function FilterActivity({
   handleActivityChange,
-  getActivities,
   activities,
 }) {
   // conectar con redux, crear archivo index,js
   // recibir como props  y activities
-  useEffect(() => {
-    getActivities();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+
 
   return (
     <div className={styles.displayFilter}>

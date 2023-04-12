@@ -98,56 +98,57 @@ function Countries({ countries, getCountries, getActivities, activities }) {
         population={population}
         alphabetically={alphabetically}
       />
+      <div className={styles.divContainer}>
+        <InteractiveSearch
+          handleSearchInputChange={handleSearchInputChange}
+          handleResetChange={handleResetChange}
+        />
+        {countries.length && activities.length ? (
+          <div className={styles.countries}>
+            {countries &&
+              countries.length &&
+              listaPaises?.map((country) => (
+                <Link
+                  className={styles.card}
+                  to={`/countries/${country.id}`}
+                  key={country.id}
+                >
+                  <p className={styles.p}> {country.name}</p>
+                  <img
+                    className={styles.img}
+                    src={country.bandera}
+                    alt={country.name}
+                  />
+                  <p className={styles.p}>{country.continente}</p>
+                </Link>
+              ))}
+          </div>
+        ) : (
+          <div className={styles.spinerContainer}>
+            <div className={styles.spinner} />
+          </div>
+        )}
 
-      <InteractiveSearch
-        handleSearchInputChange={handleSearchInputChange}
-        handleResetChange={handleResetChange}
-      />
-      {countries.length && activities.length ? (
-        <div className={styles.countries}>
-          {countries &&
-            countries.length &&
-            listaPaises?.map((country) => (
-              <Link
-                className={styles.card}
-                to={`/countries/${country.id}`}
-                key={country.id}
-              >
-                <p className={styles.p}> {country.name}</p>
-                <img
-                  className={styles.img}
-                  src={country.bandera}
-                  alt={country.name}
-                />
-                <p className={styles.p}>{country.continente}</p>
-              </Link>
-            ))}
+        <div className={styles.divButton}>
+          <button
+            className={`${styles.buttonPag} ${
+              disabledButtons ? styles.buttonDisabled : ''
+            }`}
+            onClick={() => cambiarPagina('anterior')}
+            disabled={disabledButtons}
+          >
+            Anterior
+          </button>
+          <button
+            className={`${styles.buttonPag} ${
+              disabledButtons ? styles.buttonDisabled : ''
+            }`}
+            onClick={() => cambiarPagina('siguiente')}
+            disabled={disabledButtons}
+          >
+            Siguiente
+          </button>
         </div>
-      ) : (
-        <div className={styles.spinerContainer}>
-          <div className={styles.spinner} />
-        </div>
-      )}
-
-      <div className={styles.divButton}>
-        <button
-          className={`${styles.buttonPag} ${
-            disabledButtons ? styles.buttonDisabled : ''
-          }`}
-          onClick={() => cambiarPagina('anterior')}
-          disabled={disabledButtons}
-        >
-          Anterior
-        </button>
-        <button
-          className={`${styles.buttonPag} ${
-            disabledButtons ? styles.buttonDisabled : ''
-          }`}
-          onClick={() => cambiarPagina('siguiente')}
-          disabled={disabledButtons}
-        >
-          Siguiente
-        </button>
       </div>
     </div>
   );
