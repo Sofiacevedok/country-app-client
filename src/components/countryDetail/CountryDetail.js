@@ -13,7 +13,6 @@ export default function CountryDetail({ getCountry, country }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pais]);
 
-  console.log({ pais: country });
   const nameActividad =
     country?.Activities?.length > 0
       ? country.Activities[0].name

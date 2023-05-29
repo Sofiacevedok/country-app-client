@@ -31,7 +31,6 @@ function Countries({ countries, getCountries, getActivities, activities }) {
 
   const handleActivityChange = (e) => {
     const selectedActividades = e.target.value;
-    console.log('User Selected Value - ', e.target.value);
     setActivity(selectedActividades);
   };
 
@@ -76,14 +75,6 @@ function Countries({ countries, getCountries, getActivities, activities }) {
     }
   };
 
-  console.log('SADASDASD', {
-    countries,
-    population,
-    alphabetically,
-    activity,
-    name,
-  });
-
   /*   if (!countries.length || !activities.length) {
     return <div>Loading</div>;
   } */
@@ -103,7 +94,7 @@ function Countries({ countries, getCountries, getActivities, activities }) {
           handleSearchInputChange={handleSearchInputChange}
           handleResetChange={handleResetChange}
         />
-        {countries.length && activities.length ? (
+        {countries.length ? (
           <div className={styles.countries}>
             {countries &&
               countries.length &&

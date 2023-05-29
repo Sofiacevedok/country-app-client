@@ -39,7 +39,6 @@ export function getActivities() {
     return axios
       .get(url)
       .then((response) => {
-        console.log({ response });
         dispatch({
           type: GET_ACTIVITY,
           payload: response.data,

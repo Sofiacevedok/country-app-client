@@ -1,15 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from '../filterStyles.module.css';
 
 //, { useState, useEffect }
 
-export default function FilterActivity({
-  handleActivityChange,
-  activities,
-}) {
+export default function FilterActivity({ handleActivityChange, activities }) {
   // conectar con redux, crear archivo index,js
   // recibir como props  y activities
-
 
   return (
     <div className={styles.displayFilter}>
